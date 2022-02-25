@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Duchtman</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="js/Beverages.js"></script>
+    <script type="text/javascript" src="js/DBLoaded.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" src="js/ModelFunctions.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+
+</head>
+
+<body>
+    
+<pre id="names"></pre>
+<script>
+    document.getElementById("names").innerHTML = allBeverages();
+
+    </script>
+<!---
+
+The html-file is just for loading the javascript files. If you go to the console under the "Inspect" of the popup menu,
+then you can enter javascript calls, to test the functions.
+
+-->
+<div>
+    <a onclick="bartender_login()">Bartender Login</a>
+</div>
+
+<div id="bartender_login_form" class="login">
+    <button id = "close" class="close" onclick="close_login()">X</button>
+    <form name="login_form" action="javascript: void(0);">
+        <input type="text" name="user_name" placeholder="Enter User Name" required="required">
+        <input type="password" name="login_password" placeholder="Password" required="required">
+        <input type="submit" id="login" name="login" value="Login" onClick="bar_login(login_form)"> 
+        <input type="hidden" name="user_type" value="bartender">
+
+    </form>
+
+
+
+</div>
+
+
+
+
+<script src="js/index.js" type="text/javascript"></script>
+
+</body>
+
+</html>
+
